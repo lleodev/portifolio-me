@@ -453,10 +453,6 @@ export default async function Home() {
                   </div>
                 ))}
               </div>
-
-              <div className="mt-8 rounded-2xl border border-stroke bg-foreground/25 px-4 py-4 text-sm text-muted">
-                {profile.experienceNote}
-              </div>
             </div>
           </MotionIn>
         </section>
