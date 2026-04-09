@@ -1,4 +1,62 @@
-export const profile = {
+export type ProfileLinkGithub = {
+  url: string;
+  username: string;
+};
+
+export type ProfileSkillGroup = {
+  title: string;
+  items: string[];
+};
+
+export type ProfileExperience = {
+  company: string;
+  type: string;
+  location: string;
+  title: string;
+  start: string;
+  end: string;
+  description: string;
+  skills: string[];
+};
+
+export type ProfileEducation = {
+  school: string;
+  degree: string;
+  start?: string;
+  end?: string;
+  activities: string[];
+  description: string;
+};
+
+export type HighlightFromPost = {
+  title: string;
+  description: string;
+  tags: string[];
+};
+
+export type Profile = {
+  name: string;
+  headline: string;
+  about: string;
+  highlights: string[];
+  featuredRepos: string[];
+  links: {
+    intra42: string;
+    linkedin: string;
+    github: ProfileLinkGithub;
+  };
+  location: string;
+  followerStats: { followers: number; connections: number };
+  openToRoles: string[];
+  services: string[];
+  skills: ProfileSkillGroup[];
+  experience: ProfileExperience[];
+  education: ProfileEducation[];
+  highlightsFromPosts: HighlightFromPost[];
+  fortyTwoHighlights: string[];
+};
+
+export const profile: Profile = {
   name: "Leonardo Jorge",
   headline:
     "Full Stack Developer || React || React Native || Node.js (TS) || UI/UX Design (Figma) || SQL || C and C++ programming || UNIX Systems || Algorithms && AI",
@@ -10,6 +68,7 @@ export const profile = {
     "React Native",
     "Node.js (TS)",
     "UI/UX (Figma)",
+    "3+ anos (Freelance)",
     "SQL",
     "C/C++",
     "UNIX",
@@ -39,37 +98,92 @@ export const profile = {
   ],
   experience: [
     {
-      company: "42 Luanda",
-      type: "No local",
+      company: "Freelance",
+      type: "Remoto",
       location: "Luanda, Angola",
-      title: "Aprendiz (42 Cadet)",
-      start: "mai de 2024",
-      end: "o momento",
+      title: "Rede Social de Descoberta de Lugares (Mobile)",
+      start: "2023",
+      end: "2024",
       description:
-        "Estudante/cadet na 42 Luanda, desenvolvendo projetos com forte base em C, UNIX, estruturas de dados, trabalho em equipa e resolução de problemas.",
-      skills: ["Unix", "C", "Algoritmos", "Trabalho em equipe"],
+        "Rede social mobile para descoberta e partilha de lugares (casas, hotéis, restaurantes), com sistema de seguidores e conteúdos voltados à hotelaria/turismo e amantes de imóveis.",
+      skills: [
+        "React Native",
+        "Social graph",
+        "Auth",
+        "Conteúdo",
+        "UX",
+      ],
     },
     {
-      company: "42 Luanda",
-      type: "No local",
+      company: "Freelance",
+      type: "Remoto",
       location: "Luanda, Angola",
-      title: "42 Pisciner",
-      start: "nov de 2023",
-      end: "o momento",
+      title: "ECONOMIZA — Comparação de Preços e Promoções (Mobile)",
+      start: "2024",
+      end: "2025",
       description:
-        "Participação na Piscine da 42 Luanda: experiência intensa de aprendizagem, perseverança e colaboração, com foco em fundamentos de programação e C.",
-      skills: ["UNIX", "Shell", "C", "Colaboração"],
+        "Aplicativo mobile para comparação de preços de produtos em supermercados, com promoções, ofertas e sorteios. Foco em otimizar decisões de compra com UX intuitiva e integração com APIs para dados atualizados.",
+      skills: [
+        "React Native",
+        "Integração com APIs",
+        "UX",
+        "Performance",
+        "Notificações",
+      ],
+    },
+    {
+      company: "Freelance",
+      type: "Remoto",
+      location: "Luanda, Angola",
+      title: "ZUWO — Conexão entre Clientes e Corretores (Mobile)",
+      start: "2025",
+      end: "2025",
+      description:
+        "Plataforma que conecta clientes a corretores de imóveis, com busca, filtragem e gestão de anúncios. Foco em geração de leads, experiência do usuário e escalabilidade.",
+      skills: [
+        "React Native",
+        "Filtros",
+        "Imobiliário",
+        "Leads",
+        "Escalabilidade",
+      ],
+    },
+    {
+      company: "Freelance",
+      type: "Remoto",
+      location: "Luanda, Angola",
+      title: "MAPAZZZ — MapaZZZ (Mobile)",
+      start: "2025",
+      end: "2026",
+      description:
+        "Usuários cadastram zonas de risco e validam dados uns dos outros, enquanto mapas de calor interativos mostram em tempo real as áreas mais críticas. Colaboração, tecnologia e prevenção para proteger a comunidade.",
+      skills: [
+        "React Native",
+        "Mapas de calor",
+        "Validação",
+        "Colaboração",
+        "Tempo real",
+      ],
     },
   ],
   education: [
     {
-      school: "42 (42 The Network)",
-      degree: "Computer Software Engineering",
-      start: "",
-      end: "",
-      activities: ["football", "voleyball", "basketball", "Karaokê"],
+      school: "42 Luanda (42 The Network)",
+      degree: "Cursus — Engenharia de Software",
+      start: "mai de 2024",
+      end: "presente",
+      activities: ["Projetos em C/UNIX", "Trabalho em equipa", "Resolução de problemas"],
       description:
-        "Hi there, I am a software engineering student at 42school. recently admitted as a cadet. I love technology and am fascinated by it. solve problems in society and make people's lives simpler and more accessible by applying programming :)",
+        "Percurso no cursus da 42: base forte em C/UNIX, estruturas de dados, processos/sinais, networking e desenvolvimento de projetos. Alguns projetos: libft, ft_printf, get_next_line, born2beroot, push_swap, so_long, philosophers, cub3d, minishell, inception, ft_transcendence.",
+    },
+    {
+      school: "42 Luanda (42 The Network)",
+      degree: "Piscine — Programação em C e UNIX",
+      start: "nov de 2023",
+      end: "dez de 2023",
+      activities: ["C", "Shell", "Peer learning", "Persistência"],
+      description:
+        "Experiência intensa e imersiva de aprendizagem na 42: fundamentos de programação, lógica, disciplina e colaboração — com foco em C, UNIX e resolução de problemas sob pressão.",
     },
     {
       school: "IPIL",
@@ -119,4 +233,4 @@ export const profile = {
     "inception",
     "ft_transcendence",
   ],
-} as const;
+};

@@ -1,6 +1,7 @@
 "use client";
 
 import clsx from "clsx";
+import Image from "next/image";
 import { GitFork, BriefcaseBusiness, ExternalLink } from "lucide-react";
 import { profile } from "@/lib/profile";
 
@@ -27,8 +28,15 @@ export function SiteHeader() {
           href="#top"
           className="group inline-flex items-center gap-2 font-mono text-sm text-text/95"
         >
-          <span className="inline-flex h-7 w-7 items-center justify-center rounded-lg border border-stroke bg-foreground/45 shadow-[0_0_0_6px_rgba(61,84,255,0.08)]">
-            LJ
+          <span className="relative inline-flex h-7 w-7 overflow-hidden rounded-lg border border-stroke bg-foreground/45 shadow-[0_0_0_6px_rgba(61,84,255,0.08)]">
+            <Image
+              src="/avatar.jpg"
+              alt={`${profile.name} — foto`}
+              fill
+              sizes="28px"
+              className="object-cover"
+              priority
+            />
           </span>
           <span className="hidden sm:inline">{profile.name}</span>
           <span className="text-muted transition-colors group-hover:text-text">

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="g" x1="12" y1="12" x2="52" y2="52" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3d54ff" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#00e5ff" stop-opacity="0.90"/>
+    </linearGradient>
+    <radialGradient id="r" cx="22" cy="18" r="42" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3d54ff" stop-opacity="0.20"/>
+      <stop offset="1" stop-color="#0e111b" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#000" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="#0e111b"/>
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="url(#r)"/>
+  <rect x="4.5" y="4.5" width="55" height="55" rx="13.5" fill="none" stroke="rgba(238,242,255,0.12)"/>
+
+  <path d="M22 17c-8 3-12 10-12 15s4 12 12 15" fill="none" stroke="url(#g)" stroke-width="2.2" stroke-linecap="round" opacity="0.85"/>
+  <path d="M42 17c8 3 12 10 12 15s-4 12-12 15" fill="none" stroke="url(#g)" stroke-width="2.2" stroke-linecap="round" opacity="0.85"/>
+
+  <g filter="url(#shadow)">
+    <text x="32" y="38" text-anchor="middle" font-size="18" font-weight="700" fill="#eef2ff"
+      font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, monospace">&lt;/&gt;</text>
+  </g>
+</svg>
