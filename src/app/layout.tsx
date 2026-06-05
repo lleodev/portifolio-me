@@ -15,13 +15,13 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Leonardo Jorge — Software Developer",
   description:
-    "Portfolio moderno com 3D e animações — projetos, stack e trajetória na 42.",
+    "Portfolio moderno com animações e foto do GitHub — projetos, stack e trajetória na 42.",
   metadataBase: new URL("https://lleodev.github.io"),
   icons: [{ rel: "icon", url: "/icon.svg", type: "image/svg+xml" }],
   openGraph: {
     title: "Leonardo Jorge — Software Developer",
     description:
-      "Portfolio moderno com 3D e animações — projetos, stack e trajetória na 42.",
+      "Portfolio moderno com animações e foto do GitHub — projetos, stack e trajetória na 42.",
     type: "website",
     url: "https://lleodev.github.io",
   },

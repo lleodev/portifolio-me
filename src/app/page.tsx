@@ -4,6 +4,7 @@ import {
   ArrowUpRight,
   GitFork,
 } from "lucide-react";
+import Image from "next/image";
 import { profile } from "@/lib/profile";
 import {
   getGithubProfile,
@@ -17,7 +18,6 @@ import { Card } from "@/components/ui/Card";
 import { MotionIn } from "@/components/motion/MotionIn";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
-import DevScene from "@/components/three/DevScene";
 import { ProjectsSection } from "@/components/projects/ProjectsSection";
 
 function summarizeLanguages(repos: { language: string | null }[]) {
@@ -152,21 +152,16 @@ export default async function Home() {
 
             <div className="lg:col-span-7 lg:pl-16">
               <MotionIn delay={0.1}>
-                <div className="glass glow-ring overflow-hidden rounded-3xl">
-                  <div className="flex items-center justify-between border-b border-stroke px-5 py-4">
-                    <div className="font-mono text-xs text-muted">
-                      ~/portfolio/scene.tsx
-                    </div>
-                    <a
-                      href="#projects"
-                      className="inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-text"
-                    >
-                      Ver projetos <ArrowUpRight className="h-4 w-4" />
-                  </a>
-                </div>
-                  <div className="p-2 sm:p-3">
-                    <DevScene />
-                  </div>
+                <div className="relative mx-auto aspect-[3/4] max-w-[420px] overflow-hidden rounded-[2rem] lg:ml-auto">
+                  <Image
+                    src="/leonardo-jorge.jpg"
+                    alt={`${profile.name} — foto`}
+                    fill
+                    priority
+                    sizes="(max-width: 1024px) 100vw, 42vw"
+                    quality={100}
+                    className="object-cover object-center"
+                  />
                 </div>
               </MotionIn>
             </div>
@@ -425,8 +420,9 @@ export default async function Home() {
                     Trajetória na 42 (inspirado no Intra)
                   </h2>
                   <p className="mt-2 max-w-2xl text-muted">
-                    Um mapa em 3D que representa alguns projetos do cursus. (O
-                    Intra pode exigir login — aqui deixo o link direto.)
+                    Um painel visual com a tua foto e alguns projetos do
+                    cursus. (O Intra pode exigir login - aqui deixo o link
+                    direto.)
                   </p>
                 </div>
                 <Button

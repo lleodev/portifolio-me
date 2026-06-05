@@ -186,7 +186,7 @@ export const profile: Profile = {
         "Experiência intensa e imersiva de aprendizagem na 42: fundamentos de programação, lógica, disciplina e colaboração — com foco em C, UNIX e resolução de problemas sob pressão.",
     },
     {
-      school: "IPIL",
+      school: "IPIL (MAKARENKO)",
       degree:
         "Colegial Técnico — Computer Programming, Specific Applications",
       start: "fev de 2020",

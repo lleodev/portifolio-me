@@ -1,4 +1,4 @@
-Portfolio de `lleodev` (Leonardo Jorge) — UI moderna com animações e uma cena 3D (Three.js + React Three Fiber).
+Portfolio de `lleodev` (Leonardo Jorge) — UI moderna com animações e foto puxada do GitHub.
 
 ## Getting Started
 
