@@ -19,6 +19,7 @@ import { MotionIn } from "@/components/motion/MotionIn";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { ProjectsSection } from "@/components/projects/ProjectsSection";
+import { FeaturedProjectsPresentation } from "@/components/projects/FeaturedProjectsPresentation";
 
 function summarizeLanguages(repos: { language: string | null }[]) {
   const map = new Map<string, number>();
@@ -331,12 +332,14 @@ export default async function Home() {
           </MotionIn>
         </section>
 
+        <FeaturedProjectsPresentation />
+
         <section id="projects" className="container-max mt-16 sm:mt-24">
           <MotionIn>
             <div className="flex items-end justify-between gap-4">
               <div>
                 <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-                  Projetos recentes
+                  Repositórios recentes
                 </h2>
                 <p className="mt-2 text-muted">
                   Atualizado automaticamente pelo GitHub.
